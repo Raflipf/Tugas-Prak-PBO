@@ -1,0 +1,21 @@
+Dalam konteks program di atas, mari kita bahas konsep-konsep dasar pemrograman yang digunakan:
+
+1. Encapsulation:
+   - Encapsulation adalah konsep dalam pemrograman yang mengizinkan objek untuk menyembunyikan detail implementasinya dan hanya mengekspos fungsionalitas yang diperlukan.
+   - Dalam program ini, encapsulation terlihat dalam penggunaan private access modifiers untuk atribut-atribut dalam class `Buku`. Ini berarti atribut-atribut tersebut hanya dapat diakses secara langsung oleh method-method dalam class itu sendiri.
+   - Misalnya, atribut `judul`, `penulis`, dan `harga` dalam class `Buku` diakses melalui getter dan setter yang disediakan, yang mengenkapsulasi logika akses ke atribut-atribut tersebut.
+
+2. Inheritance:
+   - Inheritance adalah konsep di mana sebuah class (subclass) dapat mewarisi properti dan perilaku dari class lain (superclass).
+   - Dalam program ini, inheritance terlihat dalam hubungan antara class `Buku` dan subclass-subclassnya (`BukuKomik`, `BukuPelajaran`, dan `BukuNovel`). Subclass-subclass tersebut mewarisi atribut dan method dari class `Buku`, dan juga dapat menambahkan perilaku tambahan sesuai kebutuhan.
+   - Contohnya, subclass `BukuKomik` mewarisi atribut dan method dari `Buku`, tetapi juga memiliki perilaku tambahan seperti menghitung diskon untuk buku komik.
+
+3. Polymorphism:
+   - Polymorphism adalah konsep di mana objek dari class yang berbeda dapat memiliki perilaku yang sama, tetapi implementasinya berbeda.
+   - Dalam program ini, polymorphism terlihat dalam penggunaan method `tampilInformasi()`. Meskipun method tersebut dideklarasikan dalam class `Buku`, perilaku implementasinya dapat berbeda di setiap subclass. Misalnya, subclass `BukuKomik`, `BukuPelajaran`, dan `BukuNovel` memiliki implementasi yang berbeda untuk method `tampilInformasi()`.
+
+4. Interface atau Abstract:
+   - Interface dan abstract class adalah mekanisme dalam pemrograman berorientasi objek untuk menentukan kontrak untuk class lain.
+   - Dalam program ini, terdapat penggunaan interface (`Diskon`) dan abstract class (`Buku`) untuk menetapkan kontrak atau spesifikasi yang harus diikuti oleh subclassnya.
+   - Interface `Diskon` mendefinisikan method `hitungDiskon()` yang harus diimplementasikan oleh class yang menggunakannya. Dalam hal ini, class `BukuKomik` mengimplementasikan interface `Diskon`.
+   - Abstract class `Buku` memberikan kerangka dasar untuk semua jenis buku dengan menyediakan atribut dan method umum yang dapat diwarisi oleh subclassnya. Method `tampilInformasi()` dideklarasikan sebagai abstract, memaksa subclass untuk mengimplementasikannya sesuai kebutuhan.
